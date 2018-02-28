@@ -1,6 +1,9 @@
 # Bulls and Cows
 
 ## Setup
+
+### Without Docker Compose
+
 Before the workshop starts, please make sure you can run the RSpec tests in this repo.
 
 ```
@@ -23,6 +26,23 @@ Finished in 0.00111 seconds (files took 0.0981 seconds to load)
 ```
 
 You might need to run `gem install bundler` before running `bundle install`
+
+### With Docker Compose
+
+Run:
+
+```
+git clone https://github.com/gaborszakacs/bulls-and-cows.git
+cd bulls-and-cows
+docker-compose build
+docker-compose run --rm web ash
+```
+
+now you're inside the docker container, you can run the tests with:
+
+```
+bin/rspec
+```
 
 
 ## Game description
